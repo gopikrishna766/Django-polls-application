@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Hi {{full_name}} , {{request.user.username }}welcome to login demo of django tutorial</h2>
+<p>click here to <a href="/polls/request_mail/">send mail</a>. Click here to <a href="/polls/logout/">logout</a>. </p>
+<p>Click here for index of <a href="/polls/index/">Questions</a>. </p>
+
+ {% endblock %}

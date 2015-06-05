@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+{% if form.errors %}
+<p>sorry thats not a valid username or password</p>
+{% endif %}
+<form action="/polls/auth/" method="post">{% csrf_token %}
+<label for="username">User name:</label>
+<input type="text" name="username" id="username" value=''>
+<labe for="password">Password</labe>
+<input type="password" name="password" id="password" value="">
+<input type="submit" value="login" class="btn" />
+<a href="/polls/password/reset/">for password</a>
+</form>
+{% endblock %} 

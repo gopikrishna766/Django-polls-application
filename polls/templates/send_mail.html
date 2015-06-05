@@ -1,0 +1,13 @@
+{% extends "base.html"%}
+{%block content%}
+<form action="/polls/send_mail/" method="post">{% csrf_token %}
+<label for="to">To :</label>
+<input type="text" name="to_email" id="to_email" value=""><br/>
+<label for="subject" name="subject">subject :</label>
+<input type="text" name="subject" id="subject" value=""><br/>
+<label for="message">message :</label>
+<textarea id="message" name="message" value="">
+</textarea><br/>
+<input type="submit" value="send" class="btn" />
+</form>
+{% endblock %}
